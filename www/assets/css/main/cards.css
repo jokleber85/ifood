@@ -1,0 +1,122 @@
+.card__section{
+    background: linear-gradient(#F7F7F7 50%, #FFFFFF 50%);
+}
+
+.restaurante{
+    background: #EA1D2C;
+    margin-right: 0.75rem;
+}
+
+.mercado {
+    background: #B6D048;
+    margin-left: 0.75rem;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    width: 35%;
+    height: auto;
+}
+
+.card__texto{
+    color: #FFFFFF;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.card__img{
+    width: auto;
+    height: auto;
+}
+
+.card__opcoes{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.card__opcoes--texto{
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-family: 'Open-sans', sans-serif;
+    font-weight: 700;
+    padding: 0.2rem 0 0.4rem 0;
+    text-align: center;
+    width: 146px;
+}
+
+.restaurante__texto--bg{
+    background: #CC1825;
+}
+
+.mercado__texto--bg{
+    background: #9EB53E;
+}
+
+.icone{
+    position: relative;
+    top: 6px;
+}
+/* CARD MENORES */
+
+.cardMenor{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 2rem 5rem 5rem;
+    padding: 0 10rem;
+}
+
+.cards__menor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;;
+    height: 160px;
+    padding-top: 4rem;
+    transition: 0.5s;
+}
+
+.cards__menor:hover{
+    transform: scale(1.1);
+}
+
+.cards__figure{
+    border-radius: 8px; 
+    height: 47px;
+    width: 188px;
+    margin-bottom: 0;
+}
+
+.cards__figure--bg1{
+    background: #F6D553;
+}
+
+.cards__figure--bg2{
+    background: #F9879C;
+}
+
+.cards__figure--bg3{
+    background: #F6D553;
+}
+
+.cards__figure--bg4{
+    background: #8C60D5;
+}
+
+.cards__text{
+    font-size: 1rem;
+    font-family: 'Open-sans', sans-serif;
+    font-weight: 700;
+    opacity: 0.8;
+    padding-top: 0rem;
+}
+
+.cards__text > .icone{
+    color: #EA1D2C;
+    font-weight: bold;
+}

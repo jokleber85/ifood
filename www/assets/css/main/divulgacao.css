@@ -1,0 +1,52 @@
+.saiba__mais{
+    padding: 0 0 85px 0;
+}
+
+.saiba__mais--img1{
+    width: 85%;
+    padding-top: 10rem;
+}
+
+.saiba__mais--img2{
+    width: 85%;
+    padding-top: 12rem;
+}
+
+.saiba__mais--titulo{
+    font-family: 'Open-sans', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.saiba__mais--subTitulo{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: 1rem 0;
+    opacity: 0.6;
+}
+
+.saiba__mais--link{
+    background-color: #EA1D2C;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: 'Open-sans', sans-serif;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+/* QUESTÃO */
+
+.questao{
+    padding: 100px 108px 3rem;
+    margin: 0;
+}
+
+.questao--texto > .saiba__mais--titulo{
+    padding-right: 5rem;
+}
+
+.banner__end{
+    width: 100%;
+}

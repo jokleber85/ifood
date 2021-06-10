@@ -1,0 +1,93 @@
+/* footer {
+  padding: 0 30px;
+  margin-top: 40px;
+} */
+
+.cidades {
+  padding: 2rem 0;
+}
+
+.cidades__lista {
+  padding-bottom: 1rem;
+}
+
+.cidades__titulo {
+  color: #3E3E3E;
+  font-family: "Open-sans", sans-serif;
+  font-size: 1rem;
+  opacity: 0.8;
+  padding-bottom: 0.8rem;
+}
+
+.cidades__subTitulo {
+  color: #EA1D2C;
+  font-family: "Open-sans", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.lista__nome {
+  list-style: none;
+  padding-bottom: 1.5rem;
+}
+
+.lista__nome a {
+  color: #717171;
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 0.6;
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.cidades__nome a:hover {
+  opacity: 0.8;
+}
+
+.contato {
+  padding-top: 2rem;
+}
+
+.contato__titulo {
+  color: #3e3e3e;
+  font-family: "Open-sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.contato__nome {
+    list-style: none;
+}
+
+/* RODAPÉ FINAL */
+
+.rodape{
+  margin: 2rem 0;
+}
+
+.rodape__img{
+  display: inline-block;
+}
+
+.direitos {
+  margin-bottom: 2rem;
+}
+
+.direitos__texto {
+  color:#717171;
+  font-family: "Open-sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.35;
+  margin-bottom: 0px;
+}
+
+.termos{
+    list-style: none;
+}
+
+.termos a{
+    text-decoration: none;
+}

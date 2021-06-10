@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delivery de Comida e Mercado - iFood</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/main/chamada.css" />
+    <link rel="stylesheet" href="assets/css/main/cards.css" />
+    <link rel="stylesheet" href="assets/css/main/topListas.css" />
+    <link rel="stylesheet" href="assets/css/main/divulgacao.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+  </head>
+  <body>
+
+    <header class="fixed-top header header--color">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-1">
+            <h1>
+              <img class="icone__topo" src="assets/img/icone__topo.png" alt="ícone ifood" />
+            </h1>
+          </div>
+          <div class="col-8 d-flex justify-content-start">
+            <nav class="navbar navbar-expand-lg navbar-light header--color">
+              <div class="row">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span class="nav--color">Entregador</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span class="nav--color">Restaurante e Mercado</span></a>
+                    </li>
+                    <li class="nav-item"> 
+                      <a class="nav-link" href="#"><span class="nav--color">Carreiras</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span class="nav--color">iFood Empresas</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col-3 d-flex justify-content-around text-center align-items-center">
+            <button class="header__button--criar ">criar conta</button>
+            <button class="header__button--entrar">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="chamada header--color">
+        <div class="container text-center">
+          <div class="row">
+            <h2>Tudo para facilitar seu dia a dia</h2>
+            <p>O que você precisa está aqui. Peça e receba onde estiver.</p>
+          </div>  
+          <form class="row">
+            <div class="form-group">
+                <label class="form-label" for="endereco"></label>
+                <input type="text" class="endereco" id="endereco" placeholder="Endereço de entrega e número " />
+                <button class="form__button">Buscar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="card__section">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="card restaurante">
+              <p class="card__texto">Restaurante</p>
+              <div class="card__opcoes">
+                <div class="card__opcoes--texto restaurante__texto--bg">
+                  Ver opções <span class="icone"><i class="small material-icons">chevron_right</i></span>
+                </div>
+                <img class="card__img" src="./assets/img/restaurante.png"/>
+              </div>
+            </div>
+            <div class="card mercado">
+              <p class="card__texto">Mercado</p>
+              <div class="card__opcoes">
+                <div class="card__opcoes--texto mercado__texto--bg">
+                  Buscar lojas<span class="icone"><i class="small material-icons">chevron_right</i></span>
+                </div>
+                <img class="card__img" src="./assets/img/mercado.png"/>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row d-flex justify-content-center">
+            <div class="cardMenor">
+              <div class="col-2 cards__menor">
+                <figure class="cards__figure cards__figure--bg1 d-flex align-items-end justify-content-center">
+                  <img src="assets/img/drinks.webp">
+                </figure>
+                <p class="cards__text">Bebidas<span class="icone"><i class="small material-icons">chevron_right</i></p>
+              </div>
+              <div class="col-2 cards__menor">
+                <figure class="cards__figure cards__figure--bg2 d-flex align-items-end justify-content-center">
+                  <img src="assets/img/pharmacy.webp">
+                </figure>
+                <p class="cards__text">Farmácia<span class="icone"><i class="small material-icons">chevron_right</i></p>
+              </div>
+              <div class="col-2 cards__menor">
+                <figure class="cards__figure cards__figure--bg3 d-flex align-items-end justify-content-center">
+                  <img src="assets/img/convenience.webp">
+                </figure>
+                <p class="cards__text">Conveniência<span class="icone"><i class="small material-icons">chevron_right</i></p>
+              </div>
+              <div class="col-2 cards__menor">
+                <figure class="cards__figure cards__figure--bg4 d-flex align-items-end justify-content-center">
+                  <img src="assets/img/petshop.webp">
+                </figure>
+                <p class="cards__text">Pet shop<span class="icone"><i class="small material-icons">chevron_right</i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-fluid">
+        <div class="topListas">
+          <div class="linha"></div>
+          <div class="row">
+            <h2>Os melhores restaurantes</h2>
+            <div class="owl-carousel owl-theme carrousel">
+             
+              <div class="item item__carrousel">
+                <div class="item__carrousel--img">
+                  <img src="./assets/img/habibs.png">
+                </div>
+                <div class="item__carrousel--texto">
+                  <img src="./assets/img/medalha.png">
+                  <p>Coco Bambu</p>
+                  <p>Lanches</p>
+                </div>
+              </div>
+             
+              <div class="item item__carrousel"><h4>2</h4></div>
+              <div class="item item__carrousel"><h4>3</h4></div>
+              <div class="item item__carrousel"><h4>4</h4></div>
+              <div class="item item__carrousel"><h4>5</h4></div>
+              <div class="item item__carrousel"><h4>6</h4></div>
+              <div class="item item__carrousel"><h4>7</h4></div>
+            </div>
+          </div>
+
+          <div class="row" >
+            <div class="col-4"><a href="#"><figure><img src="./assets/img/landing-banner-1.webp"/></figure></a></div>
+            <div class="col-4"><a href="#"><figure><img src="./assets/img/landing-banner-2.webp"/></figure></a></div>
+            <div class="col-4"><a href="#"><figure><img src="./assets/img/landing-banner-3.webp"/></figure></a></div>
+          </div>
+        </div>  
+      </section>
+
+      <section class="container-fluid">
+        <div class="topListas">
+          <div class="linha"></div>
+            <div class="row">
+              <h2>Os melhores mercados</h2>
+              <div class="owl-carousel owl-theme carrousel">
+                <div class="item item__carrousel"><h4>1</h4></div>
+                <div class="item item__carrousel"><h4>2</h4></div>
+                <div class="item item__carrousel"><h4>3</h4></div>
+                <div class="item item__carrousel"><h4>4</h4></div>
+                <div class="item item__carrousel"><h4>5</h4></div>
+                <div class="item item__carrousel"><h4>6</h4></div>
+                <div class="item item__carrousel"><h4>7</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row d-flex justify-content-between">
+            <div class="col-5 saiba__mais"> 
+              <div class="row ">
+                <div class="col-6">
+                  <figure>
+                    <img class="saiba__mais--img1" src="assets/img/delivery-man.svg">
+                  </figure>
+                </div>
+                <div class="col-6">
+                  <p class="saiba__mais--titulo">A sua fome de crescer ta no iFood</p>
+                  <p class="saiba__mais--subTitulo">Cadastre seu restaurante ou o seu mercado</p>
+                  <a class="saiba__mais--link"><span>Saiba mais</span></a></div>
+              </div>
+            </div> 
+            <div class="col-5 saiba__mais">
+              <div class="row">
+                <div class="col-6">
+                  <figure>
+                    <img class="saiba__mais--img2" src="assets/img/store.svg">
+                  </figure>
+                </div>
+                <div class="col-6">
+                  <p class="saiba__mais--titulo">Quer fazer entregas pelo iFood?</p>
+                  <p class="saiba__mais--subTitulo">Faça agora seu cadastro e comece o quanto antes</p>
+                  <a class="saiba__mais--link"><span>Saiba mais</span></a>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container-fluid">
+          <div class="row topListas">
+            <div class="linha"></div>
+              <div class="questao">
+                <div class="row d-flex justify-content-between">
+                  <div class="col-3 questao--texto">
+                    <p class="saiba__mais--titulo">Você tem fome do quê?</p>
+                    <p class="saiba__mais--subTitulo">Descubra como é ser um FoodLover e faça parte da nossa revolução!</p>
+                    <a class="saiba__mais--link"><span>Saiba mais</span></a>
+                  </div>
+                  <div class="col-8"><figure><img src="assets/img/food-lover-banner.webp"></figure></div>
+                </div>                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container-fluid">
+          <div class="row topListas">
+            <div class="col-12">
+              <a><figure><img class="banner__end" src="./assets/img/ifood-mothers-day-banner-desktop.webp"></figure></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section>
+        <div class="container-fluid topListas">
+          <div class="row cidades__lista">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+              <h2 class="cidades__titulo">Explore por cidades</h2>
+              <a class="cidades__subTitulo">Ver todas</a>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <li class="lista__nome">
+                  <a href="#">Belo Horizonte</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Brasília</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Campinas</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Curitiba</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Goiânia</a>
+                </li>
+              </div>
+              
+              <div class="col-3">
+                <li class="lista__nome">
+                  <a href="#">Garulhos</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">João Pessoa</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Natal</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Niterói</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Porto Alegre</a>
+                </li>
+              </div>
+
+              <div class="col-3">
+                <li class="lista__nome">
+                  <a href="#">Ribeirão Preto</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Rio de Janeiro</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Salvador</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Santo André</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Santos</a>
+                </li>
+              </div>
+              
+              <div class="col-3">
+                <li class="lista__nome">
+                  <a href="#">São Bernado dos Campos</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">São Caetano do Sul</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">São Paulo</a>
+                </li>
+              </div>
+            </div>
+          </div> 
+          <div class="linha"></div>
+
+          <div class="row contato">
+            <div class="row">
+              <div class="col-3">
+                <li class="lista__nome">
+                  <p class="contato__titulo">iFood</p>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Site Institucional</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Fale conosco</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Carreiras</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">iFood Colômbia</a>
+                </li>
+              </div>
+              
+              <div class="col-3">
+                <li class="lista__nome">
+                  <p class="contato__titulo">Descubra</p>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Cadastre seu Restaurante ou Mercado</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">iFood Shop</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">iFood Empresas</a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#">Blog iFood Empresas</a>
+                </li>
+              </div>
+
+              <div class="col-3">
+                <li class="lista__nome">
+                  <p class="contato__titulo">Social</p>
+                </li>
+                <div class="d-flex">
+                <li class="lista__nome">
+                  <a href="#"><img src="./assets/img/facebook.png"></a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#"><img src="./assets/img/twitter.png"></a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#"><img src="./assets/img/youtube.png"></a>
+                </li>
+                <li class="lista__nome">
+                  <a href="#"><img src="./assets/img/instagram.png"></a>
+                </li>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rodape">
+        <div class="container-fluid">
+          <div class="row topListas">
+            <div class="linha direitos"></div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-2"><a class="rodape__img" href="#"><img src="assets/img/icone__rodape.png"></a></div>
+                <div class="col-10">
+                  <p class="direitos__texto">© Copyright 2021 - iFood - Todos os direitos reservados iFood com Agência de Restaurantes Online S.A.</p>
+                  <p class="direitos__texto">CNPJ 14.380.200/0001-21 / Avenida dos Autonomistas, nº 1496, Vila Yara, Osasco/SP - CEP 06.020-902</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-7">
+              <ul class="d-flex justify-content-between">
+                <li class="termos lista__nome"><a href="#">Termos e condições de uso</a></li>
+                <li class="termos lista__nome"><a href="#">Código de conduta</a></li>
+                <li class="termos lista__nome"><a href="#">Privacidade</a></li>
+                <li class="termos lista__nome"><a href="#">Dicas de segurança</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+  </body>
+</html>

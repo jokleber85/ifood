@@ -1,0 +1,37 @@
+.chamada{
+    padding: 13% 0 60px 0;
+}
+
+.chamada h2{
+    font-family: 'Open-sans', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.chamada p{
+    color: #717171;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.endereco{
+    background-image: url("../../img/imagem.png");
+    background-repeat: no-repeat;
+    color: #A6A6A6;
+    border: none;
+    font-weight: 300;
+    padding: 0.8rem 23px 0.8rem 3.3rem;
+    width: 62%;
+}
+
+.form__button{
+    background: #EA1D2C;
+    border:none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 0.7rem 2.5rem;
+}

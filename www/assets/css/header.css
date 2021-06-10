@@ -1,0 +1,49 @@
+.icone__topo{
+    width:auto;
+    height:auto;
+}
+
+.header{
+    padding: 1rem 1.5rem;
+}
+
+.header--color{
+    background: #F7F7F7;
+}
+
+.nav-item{
+    margin-left: 1.5rem;
+}
+
+.nav--color{
+    font-family: 'Open-sans', sans-serif;
+    font-weight:700;
+}
+
+.header__button--criar{
+    background-color: transparent;
+    border: none;    
+    color: #EA1D2C;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+.header__button--entrar{
+    background: #EA1D2C;
+    border:none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.7rem 2rem;
+}
+
+.header__button--entrar:hover{
+    background: #C2121F;
+}
+
+.linha {
+    background-color: #F7F7F7;
+    border: 1px solid #F7F7F7;
+}
