@@ -23,10 +23,10 @@
   <body>
 
     <header >
-      <!-- Responsivo min-width (960px) -->
       <div class="container-fluid p-0 fixed-top">
         <div class="header header--color"> 
           <div class="row">
+            <div id="myID" class="bottomMenu hide"></div>
             <div class="col-1">
               <h1>
                 <img class="icone__topo" src="assets/img/icone__topo.png" alt="ícone ifood" />
@@ -57,7 +57,7 @@
             <div class="col-3 d-flex justify-content-around text-center align-items-center">
               <button class="header__button--criar ">criar conta</button>
               <button class="header__button--entrar">Entrar</button>
-              <div class="voucher">
+              <div class="voucher" id="voucher">
                 <div class="voucher__container">
                   <span><figure><img src="./assets/img/voucher.png"></figure></span>
                   <div class="voucher__container--texto">
@@ -65,7 +65,7 @@
                     <p>Pegue seu cupom e aproveite o desconto</p>
                     <button>Criar conta</button>
                   </div>
-                  <button><span>x</span></button>
+                  <button onClick="fechar();"><span>x</span></button>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@
               <div class="item item__carrousel">
                   <a class="item__container">
                     <div class="item__medalha"></div>
-                    <img src="./assets/img/Logo McDonald_MCDON_DRIV15.webp">
+                    <span><img src="./assets/img/Logo McDonald_MCDON_DRIV15.webp"></span>
                     <div class="item__texto">
                       <p>Mcdonald's</p>
                       <p>Lanches</p>
@@ -168,7 +168,7 @@
               <div class="item item__carrousel">
                 <a class="item__container">
                   <div class="item__medalha"></div>
-                  <img src="./assets/img/Logo CocoBambu_MCDON_DRIV15.webp">
+                  <span><img src="./assets/img/Logo CocoBambu_MCDON_DRIV15.webp"></span>
                   <div class="item__texto">
                     <p>Coco Bambu</p>
                     <p>Frutos do Mar</p>
@@ -178,7 +178,7 @@
               <div class="item item__carrousel">
                 <a class="item__container">
                   <div class="item__medalha"></div>
-                  <img src="./assets/img/Logo ChinaBox_MCDON_DRIV15.webp">
+                  <span><img src="./assets/img/Logo ChinaBox_MCDON_DRIV15.webp"></span>
                   <div class="item__texto">
                     <p>ChinaBox</p>
                     <p>Chinesa</p>
@@ -188,7 +188,7 @@
               <div class="item item__carrousel">
                 <a class="item__container">
                   <div class="item__medalha"></div>
-                  <img src="./assets/img/HABIB_VERDE.webp">
+                  <span><img src="./assets/img/HABIB_VERDE.webp"></span>
                   <div class="item__texto">
                     <p>Habib´s</p>
                     <p>Lanches</p>
@@ -198,7 +198,7 @@
               <div class="item item__carrousel">
                 <a class="item__container">
                   <div class="item__medalha"></div>
-                  <img src="./assets/img/outback.webp">
+                  <span><img src="./assets/img/outback.webp"></span>
                   <div class="item__texto">
                     <p>Outback</p>
                     <p>Lanches</p>
@@ -208,9 +208,9 @@
               <div class="item item__carrousel">
                 <a class="item__container">
                   <div class="item__medalha"></div>
-                  <img src="./assets/img/Logo McDonald_MCDON_DRIV15.webp">
+                  <span><img src="./assets/img/HABIB_VERDE.webp"></span>
                   <div class="item__texto">
-                    <p>Mcdonald's</p>
+                    <p>Habib´s's</p>
                     <p>Lanches</p>
                   </div>
                 </a>
@@ -232,13 +232,54 @@
             <div class="row">
               <h2>Os melhores mercados</h2>
               <div class="owl-carousel owl-theme carrousel" id="topMercados">
-                <div class="item item__carrousel"><h4>1</h4></div>
-                <div class="item item__carrousel"><h4>2</h4></div>
-                <div class="item item__carrousel"><h4>3</h4></div>
-                <div class="item item__carrousel"><h4>4</h4></div>
-                <div class="item item__carrousel"><h4>5</h4></div>
-                <div class="item item__carrousel"><h4>6</h4></div>
-                <div class="item item__carrousel"><h4>7</h4></div>
+                <div class="item item__carrousel">
+                  <div class="item__container">
+                    <span><img src="./assets/img/big.webp"></span>
+                    <div>
+                      <h3 class="item__texto--mercado">Big Supermecado</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item__carrousel">
+                  <div class="item__container">
+                    <span><img src="./assets/img/eataly.webp"></span>
+                    <div>
+                      <h3 class="item__texto--mercado">Big</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item__carrousel">
+                  <div class="item__container">
+                    <span><img src="./assets/img/eataly.webp"></span>
+                    <div>
+                      <h3 class="item__texto--mercado">Eataly</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item__carrousel">
+                  <div class="item__container">
+                    <span><img src="./assets/img/diaSupermecado.webp"></span>
+                    <div>
+                      <h3 class="item__texto--mercado">Dia Supermecado</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item__carrousel">
+                  <div class="item__container">
+                    <span><img src="./assets/img/big.webp"></span>
+                    <div>
+                      <h3 class="item__texto--mercado">Big</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item__carrousel">
+                  <div class="item__container">
+                    <span><img src="./assets/img/eataly.webp"></span>
+                    <div>
+                      <h3 class="item__texto--mercado">Eataly</h3>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
