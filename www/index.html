@@ -22,46 +22,60 @@
   </head>
   <body>
 
-    <header class="fixed-top header header--color">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-1">
-            <h1>
-              <img class="icone__topo" src="assets/img/icone__topo.png" alt="ícone ifood" />
-            </h1>
-          </div>
-          <div class="col-8 d-flex justify-content-start">
-            <nav class="navbar navbar-expand-lg navbar-light header--color">
-              <div class="row">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><span class="nav--color">Entregador</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><span class="nav--color">Restaurante e Mercado</span></a>
-                    </li>
-                    <li class="nav-item"> 
-                      <a class="nav-link" href="#"><span class="nav--color">Carreiras</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><span class="nav--color">iFood Empresas</span></a>
-                    </li>
-                  </ul>
+    <header >
+      <!-- Responsivo min-width (960px) -->
+      <div class="container-fluid p-0 fixed-top">
+        <div class="header header--color"> 
+          <div class="row">
+            <div class="col-1">
+              <h1>
+                <img class="icone__topo" src="assets/img/icone__topo.png" alt="ícone ifood" />
+              </h1>
+            </div>
+            <div class="col-lg-8 d-flex justify-content-start "><!-- d-none d-lg-block -->
+              <nav class="navbar navbar-expand-lg navbar-light nav--color">
+                <div class="row">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="nav--color">Entregador</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="nav--color">Restaurante e Mercado</span></a>
+                      </li>
+                      <li class="nav-item"> 
+                        <a class="nav-link" href="#"><span class="nav--color">Carreiras</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="nav--color">iFood Empresas</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="col-3 d-flex justify-content-around text-center align-items-center">
+              <button class="header__button--criar ">criar conta</button>
+              <button class="header__button--entrar">Entrar</button>
+              <div class="voucher">
+                <div class="voucher__container">
+                  <span><figure><img src="./assets/img/voucher.png"></figure></span>
+                  <div class="voucher__container--texto">
+                    <p>Ganhe cupons!</p>
+                    <p>Pegue seu cupom e aproveite o desconto</p>
+                    <button>Criar conta</button>
+                  </div>
+                  <button><span>x</span></button>
                 </div>
               </div>
-            </nav>
-          </div>
-          <div class="col-3 d-flex justify-content-around text-center align-items-center">
-            <button class="header__button--criar ">criar conta</button>
-            <button class="header__button--entrar">Entrar</button>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="chamada header--color">
+      <section class="chamada">
         <div class="container text-center">
           <div class="row">
             <h2>Tudo para facilitar seu dia a dia</h2>
@@ -99,7 +113,11 @@
               </div>
             </div>
           </div>
-          
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="cardMenor">
               <div class="col-2 cards__menor">
@@ -136,25 +154,67 @@
           <div class="linha"></div>
           <div class="row">
             <h2>Os melhores restaurantes</h2>
-            <div class="owl-carousel owl-theme carrousel">
-             
+            <div class="owl-carousel owl-theme carrousel" id="topRestaurantes">
               <div class="item item__carrousel">
-                <div class="item__carrousel--img">
-                  <img src="./assets/img/habibs.png">
-                </div>
-                <div class="item__carrousel--texto">
-                  <img src="./assets/img/medalha.png">
-                  <p>Coco Bambu</p>
-                  <p>Lanches</p>
-                </div>
+                  <a class="item__container">
+                    <div class="item__medalha"></div>
+                    <img src="./assets/img/Logo McDonald_MCDON_DRIV15.webp">
+                    <div class="item__texto">
+                      <p>Mcdonald's</p>
+                      <p>Lanches</p>
+                    </div>
+                  </a>
               </div>
-             
-              <div class="item item__carrousel"><h4>2</h4></div>
-              <div class="item item__carrousel"><h4>3</h4></div>
-              <div class="item item__carrousel"><h4>4</h4></div>
-              <div class="item item__carrousel"><h4>5</h4></div>
-              <div class="item item__carrousel"><h4>6</h4></div>
-              <div class="item item__carrousel"><h4>7</h4></div>
+              <div class="item item__carrousel">
+                <a class="item__container">
+                  <div class="item__medalha"></div>
+                  <img src="./assets/img/Logo CocoBambu_MCDON_DRIV15.webp">
+                  <div class="item__texto">
+                    <p>Coco Bambu</p>
+                    <p>Frutos do Mar</p>
+                  </div>
+                </a>
+              </div>
+              <div class="item item__carrousel">
+                <a class="item__container">
+                  <div class="item__medalha"></div>
+                  <img src="./assets/img/Logo ChinaBox_MCDON_DRIV15.webp">
+                  <div class="item__texto">
+                    <p>ChinaBox</p>
+                    <p>Chinesa</p>
+                  </div>
+                </a>
+              </div>
+              <div class="item item__carrousel">
+                <a class="item__container">
+                  <div class="item__medalha"></div>
+                  <img src="./assets/img/HABIB_VERDE.webp">
+                  <div class="item__texto">
+                    <p>Habib´s</p>
+                    <p>Lanches</p>
+                  </div>
+                </a>
+              </div>
+              <div class="item item__carrousel">
+                <a class="item__container">
+                  <div class="item__medalha"></div>
+                  <img src="./assets/img/outback.webp">
+                  <div class="item__texto">
+                    <p>Outback</p>
+                    <p>Lanches</p>
+                  </div>
+                </a>
+              </div>
+              <div class="item item__carrousel">
+                <a class="item__container">
+                  <div class="item__medalha"></div>
+                  <img src="./assets/img/Logo McDonald_MCDON_DRIV15.webp">
+                  <div class="item__texto">
+                    <p>Mcdonald's</p>
+                    <p>Lanches</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -166,12 +226,12 @@
         </div>  
       </section>
 
-      <section class="container-fluid">
+      <section class="container-fluid topMercados">
         <div class="topListas">
           <div class="linha"></div>
             <div class="row">
               <h2>Os melhores mercados</h2>
-              <div class="owl-carousel owl-theme carrousel">
+              <div class="owl-carousel owl-theme carrousel" id="topMercados">
                 <div class="item item__carrousel"><h4>1</h4></div>
                 <div class="item item__carrousel"><h4>2</h4></div>
                 <div class="item item__carrousel"><h4>3</h4></div>
@@ -189,20 +249,20 @@
         <div class="container">
           <div class="row d-flex justify-content-between">
             <div class="col-5 saiba__mais"> 
-              <div class="row ">
+              <div class="row saiba__mais--imgFundo">
                 <div class="col-6">
                   <figure>
                     <img class="saiba__mais--img1" src="assets/img/delivery-man.svg">
                   </figure>
                 </div>
-                <div class="col-6">
+                <div class="col-6" >
                   <p class="saiba__mais--titulo">A sua fome de crescer ta no iFood</p>
                   <p class="saiba__mais--subTitulo">Cadastre seu restaurante ou o seu mercado</p>
                   <a class="saiba__mais--link"><span>Saiba mais</span></a></div>
               </div>
             </div> 
             <div class="col-5 saiba__mais">
-              <div class="row">
+              <div class="row saiba__mais--imgFundo">
                 <div class="col-6">
                   <figure>
                     <img class="saiba__mais--img2" src="assets/img/store.svg">

@@ -3,13 +3,15 @@
 }
 
 .saiba__mais--img1{
-    width: 85%;
+    width: 100%;
     padding-top: 10rem;
+    padding-left: 2rem;
 }
 
 .saiba__mais--img2{
-    width: 85%;
+    width: 100%;
     padding-top: 12rem;
+    padding-left: 2rem;
 }
 
 .saiba__mais--titulo{
@@ -34,6 +36,12 @@
     font-weight: 700;
     padding: 1rem 2rem;
     text-decoration: none;
+}
+
+.saiba__mais--imgFundo{
+    background-image: url('../../img/link-background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* QUESTÃO */
