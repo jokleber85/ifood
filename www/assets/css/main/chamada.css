@@ -36,3 +36,33 @@
     margin-left: 1rem;
     padding: 0.7rem 2.5rem;
 }
+
+@media screen and (max-width:1140px){
+    .chamada{
+        padding-top: 20%;
+    }
+
+    .form__endereco > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .endereco, .form__button{
+        width: 80%;
+        margin-bottom: 2rem;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .chamada {
+        padding-top: 30%;
+    }
+}
+ 
+@media screen and (max-width: 540px){
+    .chamada {
+        padding-top: 45%;
+    }
+} 

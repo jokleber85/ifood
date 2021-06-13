@@ -1,6 +1,26 @@
-function fechar(){
-    const voucher = document.getElementById("voucher");
-    voucher.style.display = "none";
+$(document).ready(function(){
+    $("#navToggler").css("display","none");
+})
+
+function fechar(botao){
+    if (botao == "voucher"){
+        const voucher = document.getElementById("voucher");
+        voucher.style.display = "none";
+    }
+    else{
+        const toggler = document.getElementById("navToggler");
+        toggler.style.display = "none";
+    }
+}
+
+function showToggler(){
+    const toggler = document.getElementById("navToggler");
+    console.log(toggler.style.display);
+    if (toggler.style.display == "block"){
+        toggler.style.display = "none";
+    }else{
+        toggler.style.display = "block";
+    }
 }
 
 var scrollHeaderBottom = function() {

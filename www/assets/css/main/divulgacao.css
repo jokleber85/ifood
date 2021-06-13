@@ -14,6 +14,12 @@
     padding-left: 2rem;
 }
 
+.saiba__mais--imgFundo{
+    background-image: url('../../img/link-background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .saiba__mais--titulo{
     font-family: 'Open-sans', sans-serif;
     font-size: 2.25rem;
@@ -38,23 +44,43 @@
     text-decoration: none;
 }
 
-.saiba__mais--imgFundo{
-    background-image: url('../../img/link-background.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 /* QUESTÃO */
 
 .questao{
-    padding: 100px 108px 3rem;
+    padding: 100px 2rem 3rem;
     margin: 0;
-}
-
-.questao--texto > .saiba__mais--titulo{
-    padding-right: 5rem;
 }
 
 .banner__end{
     width: 100%;
+}
+
+@media screen and (max-width: 960px){
+    .saiba__mais--texto{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .saiba__mais--link{
+        width: 50%;
+    }
+
+    .questao > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .questao--texto{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    .saiba__mais--link{
+        width: 80%;
+    }
 }

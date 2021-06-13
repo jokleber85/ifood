@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/header/header.css" />
+    <link rel="stylesheet" href="assets/css/header/voucher.css" />
+    <link rel="stylesheet" href="assets/css/header/toggler.css" />    
     <link rel="stylesheet" href="assets/css/main/chamada.css" />
-    <link rel="stylesheet" href="assets/css/main/cards.css" />
+    <link rel="stylesheet" href="assets/css/main/cardSectionMaior.css" />
+    <link rel="stylesheet" href="assets/css/main/cardSectionMenor.css" />
     <link rel="stylesheet" href="assets/css/main/topListas.css" />
     <link rel="stylesheet" href="assets/css/main/divulgacao.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
@@ -26,16 +29,22 @@
       <div class="container-fluid p-0 fixed-top">
         <div class="header header--color"> 
           <div class="row">
-            <div id="myID" class="bottomMenu hide"></div>
-            <div class="col-1">
+            <div class="col-1 d-block d-lg-none" >
+              <div class="botao__toggler" id="botaoToggler" onClick="showToggler();">
+                <span><i class="large material-icons">menu</i></span>
+                </div>
+            </div>
+
+            <div class="col-5 col-lg-1">
               <h1>
                 <img class="icone__topo" src="assets/img/icone__topo.png" alt="ícone ifood" />
               </h1>
             </div>
-            <div class="col-lg-8 d-flex justify-content-start "><!-- d-none d-lg-block -->
+
+            <div class="d-none d-lg-block col-lg-8 d-flex justify-content-start">
               <nav class="navbar navbar-expand-lg navbar-light nav--color">
                 <div class="row">
-                  <div class="collapse navbar-collapse" id="navbarNav">
+                  <div class="collapse navbar-collapse offset" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
                         <a class="nav-link" href="#"><span class="nav--color">Entregador</span></a>
@@ -54,8 +63,9 @@
                 </div>
               </nav>
             </div>
-            <div class="col-3 d-flex justify-content-around text-center align-items-center">
-              <button class="header__button--criar ">criar conta</button>
+
+            <div class="col-6 col-lg-3 d-flex justify-content-around text-center align-items-center">
+              <button class="header__button--criar d-none d-md-block">criar conta</button>
               <button class="header__button--entrar">Entrar</button>
               <div class="voucher" id="voucher">
                 <div class="voucher__container">
@@ -65,7 +75,7 @@
                     <p>Pegue seu cupom e aproveite o desconto</p>
                     <button>Criar conta</button>
                   </div>
-                  <button onClick="fechar();"><span>x</span></button>
+                  <button onClick="fechar('voucher');"><span>x</span></button>
                 </div>
               </div>
             </div>
@@ -74,6 +84,28 @@
       </div>
     </header>
 
+    <div class="nav__toggler" id="navToggler">
+      <div class="toggler__container">
+        <div class="toggler__header">
+          <img src="assets/img/icone__topo.png">
+          <div class="toggler__header--sair">
+            <span onClick="fechar('toggler');"><i class="large material-icons">close</i></span>
+          </div>
+        </div>
+        <div class="toggler__body">
+          <ul class="toggler__lista">
+            <li><a href="#">Entregador</a></li>
+            <li><a href="#">Restaurante e Mercado</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">iFood Empresas</a></li>
+          </ul>
+          <button class="toggler__botao--entrar">Entrar</button>
+          <button class="toggler__botao--criar">criar conta</button>
+        </div>
+      </div>
+      
+    </div>
+
     <main>
       <section class="chamada">
         <div class="container text-center">
@@ -81,7 +113,7 @@
             <h2>Tudo para facilitar seu dia a dia</h2>
             <p>O que você precisa está aqui. Peça e receba onde estiver.</p>
           </div>  
-          <form class="row">
+          <form class="row form__endereco">
             <div class="form-group">
                 <label class="form-label" for="endereco"></label>
                 <input type="text" class="endereco" id="endereco" placeholder="Endereço de entrega e número " />
@@ -91,23 +123,25 @@
         </div>
       </section>
 
-      <section class="card__section">
+      <section class="card__section--maior">
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="card restaurante">
-              <p class="card__texto">Restaurante</p>
+              <p class="card__titulo">Restaurante</p>
               <div class="card__opcoes">
                 <div class="card__opcoes--texto restaurante__texto--bg">
-                  Ver opções <span class="icone"><i class="small material-icons">chevron_right</i></span>
+                  Ver opções 
+                  <span class="icone"><i class="small material-icons">chevron_right</i></span>
                 </div>
                 <img class="card__img" src="./assets/img/restaurante.png"/>
               </div>
             </div>
             <div class="card mercado">
-              <p class="card__texto">Mercado</p>
+              <p class="card__titulo">Mercado</p>
               <div class="card__opcoes">
                 <div class="card__opcoes--texto mercado__texto--bg">
-                  Buscar lojas<span class="icone"><i class="small material-icons">chevron_right</i></span>
+                  Buscar lojas
+                  <span class="icone"><i class="small material-icons">chevron_right</i></span>
                 </div>
                 <img class="card__img" src="./assets/img/mercado.png"/>
               </div>
@@ -116,37 +150,35 @@
         </div>
       </section>
 
-      <section>
+      <section class="card__section--menor">
         <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="cardMenor">
-              <div class="col-2 cards__menor">
-                <figure class="cards__figure cards__figure--bg1 d-flex align-items-end justify-content-center">
-                  <img src="assets/img/drinks.webp">
-                </figure>
-                <p class="cards__text">Bebidas<span class="icone"><i class="small material-icons">chevron_right</i></p>
-              </div>
-              <div class="col-2 cards__menor">
-                <figure class="cards__figure cards__figure--bg2 d-flex align-items-end justify-content-center">
-                  <img src="assets/img/pharmacy.webp">
-                </figure>
-                <p class="cards__text">Farmácia<span class="icone"><i class="small material-icons">chevron_right</i></p>
-              </div>
-              <div class="col-2 cards__menor">
-                <figure class="cards__figure cards__figure--bg3 d-flex align-items-end justify-content-center">
-                  <img src="assets/img/convenience.webp">
-                </figure>
-                <p class="cards__text">Conveniência<span class="icone"><i class="small material-icons">chevron_right</i></p>
-              </div>
-              <div class="col-2 cards__menor">
-                <figure class="cards__figure cards__figure--bg4 d-flex align-items-end justify-content-center">
-                  <img src="assets/img/petshop.webp">
-                </figure>
-                <p class="cards__text">Pet shop<span class="icone"><i class="small material-icons">chevron_right</i></p>
-              </div>
+          <div class="row d-flex justify-content-between">
+            <div class="col-2 card__menor">
+              <figure class="card__figure card__figure--bg1 d-flex align-items-end justify-content-center">
+                <img src="assets/img/drinks.webp">
+              </figure>
+              <p class="card__text">Bebidas<span class="icone"><i class="small material-icons">chevron_right</i></p>
+            </div>
+            <div class="col-2 card__menor">
+              <figure class="card__figure card__figure--bg2 d-flex align-items-end justify-content-center">
+                <img src="assets/img/pharmacy.webp">
+              </figure>
+              <p class="card__text">Farmácia<span class="icone"><i class="small material-icons">chevron_right</i></p>
+            </div>
+            <div class="col-2 card__menor">
+              <figure class="card__figure card__figure--bg3 d-flex align-items-end justify-content-center">
+                <img src="assets/img/convenience.webp">
+              </figure>
+              <p class="card__text">Conveniência<span class="icone"><i class="small material-icons">chevron_right</i></p>
+            </div>
+            <div class="col-2 card__menor d-none d-md-block">
+              <figure class="card__figure card__figure--bg4 d-flex align-items-end justify-content-center">
+                <img src="assets/img/petshop.webp">
+              </figure>
+              <p class="card__text">Pet shop<span class="icone"><i class="small material-icons">chevron_right</i></p>
             </div>
           </div>
-        </div>
+        </div>      
       </section>
 
       <section class="container-fluid">
@@ -219,11 +251,11 @@
           </div>
 
           <div class="row" >
-            <div class="col-4"><a href="#"><figure><img src="./assets/img/landing-banner-1.webp"/></figure></a></div>
-            <div class="col-4"><a href="#"><figure><img src="./assets/img/landing-banner-2.webp"/></figure></a></div>
-            <div class="col-4"><a href="#"><figure><img src="./assets/img/landing-banner-3.webp"/></figure></a></div>
+            <div class="col-12 col-lg-4 text-center"><a href="#"><figure><img src="./assets/img/landing-banner-1.webp"/></figure></a></div>
+            <div class="col-12 col-lg-4 text-center"><a href="#"><figure><img src="./assets/img/landing-banner-2.webp"/></figure></a></div>
+            <div class="col-12 col-lg-4 text-center"><a href="#"><figure><img src="./assets/img/landing-banner-3.webp"/></figure></a></div>
           </div>
-        </div>  
+        </div> 
       </section>
 
       <section class="container-fluid topMercados">
@@ -286,30 +318,30 @@
         </div>
       </section>
 
-      <section>
+      <section class="divulgacao">
         <div class="container">
           <div class="row d-flex justify-content-between">
-            <div class="col-5 saiba__mais"> 
+            <div class="col-sm-12 col-lg-6 saiba__mais"> 
               <div class="row saiba__mais--imgFundo">
                 <div class="col-6">
                   <figure>
                     <img class="saiba__mais--img1" src="assets/img/delivery-man.svg">
                   </figure>
                 </div>
-                <div class="col-6" >
+                <div class="col-6 saiba__mais--texto">
                   <p class="saiba__mais--titulo">A sua fome de crescer ta no iFood</p>
                   <p class="saiba__mais--subTitulo">Cadastre seu restaurante ou o seu mercado</p>
                   <a class="saiba__mais--link"><span>Saiba mais</span></a></div>
               </div>
             </div> 
-            <div class="col-5 saiba__mais">
+            <div class="col-sm-12 col-lg-6 saiba__mais">
               <div class="row saiba__mais--imgFundo">
                 <div class="col-6">
                   <figure>
                     <img class="saiba__mais--img2" src="assets/img/store.svg">
                   </figure>
                 </div>
-                <div class="col-6">
+                <div class="col-6 saiba__mais--texto"> 
                   <p class="saiba__mais--titulo">Quer fazer entregas pelo iFood?</p>
                   <p class="saiba__mais--subTitulo">Faça agora seu cadastro e comece o quanto antes</p>
                   <a class="saiba__mais--link"><span>Saiba mais</span></a>
@@ -321,17 +353,17 @@
       </section>
 
       <section>
-        <div class="container-fluid">
-          <div class="row topListas">
+        <div class="container">
+          <div class="row">
             <div class="linha"></div>
               <div class="questao">
-                <div class="row d-flex justify-content-between">
-                  <div class="col-3 questao--texto">
-                    <p class="saiba__mais--titulo">Você tem fome do quê?</p>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-3 questao--texto">
+                    <p class="saiba__mais--titulo text-right">Você tem fome do quê?</p>
                     <p class="saiba__mais--subTitulo">Descubra como é ser um FoodLover e faça parte da nossa revolução!</p>
                     <a class="saiba__mais--link"><span>Saiba mais</span></a>
                   </div>
-                  <div class="col-8"><figure><img src="assets/img/food-lover-banner.webp"></figure></div>
+                  <div class="col-lg-8"><figure><img src="assets/img/food-lover-banner.webp"></figure></div>
                 </div>                  
               </div>
             </div>
@@ -339,9 +371,9 @@
         </div>
       </section>
 
-      <section>
+      <section class="topListas">
         <div class="container-fluid">
-          <div class="row topListas">
+          <div class="row">
             <div class="col-12">
               <a><figure><img class="banner__end" src="./assets/img/ifood-mothers-day-banner-desktop.webp"></figure></a>
             </div>
