@@ -15,7 +15,6 @@ function fechar(botao){
 
 function showToggler(){
     const toggler = document.getElementById("navToggler");
-    console.log(toggler.style.display);
     if (toggler.style.display == "block"){
         toggler.style.display = "none";
     }else{

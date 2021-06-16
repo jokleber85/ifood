@@ -127,3 +127,13 @@
     background-color: #FFFFFF;
     color: #000000;
 }
+
+.landingBanner img{
+    width: 100%;
+}
+
+@media screen and (max-width:992px){    
+    .landingBanner img{
+        width: 70%;
+    }
+}

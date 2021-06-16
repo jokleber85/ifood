@@ -51,9 +51,14 @@
     margin: 0;
 }
 
+.loverBanner img{
+    width: 100%;
+}
+
 .banner__end{
     width: 100%;
 }
+
 
 @media screen and (max-width: 960px){
     .saiba__mais--texto{
