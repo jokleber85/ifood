@@ -17,6 +17,13 @@ $('#topRestaurantes').owlCarousel({
     }
 })
 
+$.get("https://ef2273e445b5.ngrok.io/lojas", function(data){
+
+    for(i=0; i <= 5; i++){
+        $('#topRestaurantes').trigger('add.owl.carousel', [$(`<div class="item item__carrousel"><a class="item__container"><div class="item__medalha"></div><span><img src="${data[i].image_loja}"></span><div class="item__texto"><p>${data[i].nome_loja}</p><p>${data[i].info_loja}</p></div></a></div>`), i]).trigger('refresh.owl.carousel');
+    }
+});
+
 $('#topMercados').owlCarousel({
     loop:true,
     margin:35,
@@ -35,29 +42,3 @@ $('#topMercados').owlCarousel({
         }
     }
 })
-
-$.get("https://d7f8b56e2b97.ngrok.io/lojas", function(data){
-    console.log(data);
-});
-
-/* $(document).ready(function(){
-    $.get("https://d7f8b56e2b97.ngrok.io/lojas", function(data){
-        console.log(data);
-        let item = "";
-        for(i=0; i <= data.lenght; i++){
-            item = $("#topRestaurantes").append(`<div class="item item__carrousel"><a class="item__container"><div class="item__medalha"></div><span><img src=""></span><div class="item__texto"><p>${data[i].nome_loja}</p><p>Lanches</p></div></a></div>`);
-        }
-    });
-    owl.data('#topRestaurantes').addItem(item); 
-    owl.reinit(); 
-
-}); */
-
-/* $(document).ready(function(){
-    $.get("https://d7f8b56e2b97.ngrok.io/lojas", function(data){
-        console.log(data);
-        for(i=0; i <= 7; i++){
-            $("#topRestaurantes").append(`<div class="item item__carrousel"><a class="item__container"><div class="item__medalha"></div><span><img src=""></span><div class="item__texto"><p>${data[i].nome_loja}</p><p>Lanches</p></div></a></div>`);
-        }
-    });
-});  */
